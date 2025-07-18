@@ -1,4 +1,6 @@
-/* === CSS Variables === */
+/* styles.css */
+
+/* CSS Variables */
 :root {
   --color-bg: #f7f7f7;
   --color-text: #222222;
@@ -7,147 +9,281 @@
   --color-header-text: #ffffff;
   --color-border: #ddd;
   --color-muted-text: #666666;
-  --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-subtle: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  --border-radius: 8px;
+  --font-family: "Inter", sans-serif;
+  --spacing-sm: 0.25rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
 }
 
-/* === Global Styles === */
+/* Reset and base */
 body {
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-main);
-  line-height: 1.6;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-/* === Header === */
+/* Header */
 header {
   background-color: var(--color-header-bg);
   color: var(--color-header-text);
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   text-align: center;
 }
-
 header h1 {
   margin: 0;
   font-size: 2.5rem;
 }
-
 header p {
-  font-size: 1.2rem;
-  color: #ccc;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+.links a {
+  margin-right: 1rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
 }
 
-/* === Full-width Primary Navigation === */
-.primary-nav-container {
-  background-color: #f0f0f0;
-  width: 100%;
+/* Main container */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Headings */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+h3 {
+  font-size: 1.3rem;
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  font-weight: 600;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.5rem;
+}
+li {
+  margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.project-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: var(--spacing-xl);
+}
+.project-info {
+  margin-bottom: 1rem;
+}
+.project-info strong a {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.project-info strong a:hover {
+  text-decoration: underline;
+}
+.project-info p {
+  margin: 0.5rem 0 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Project images */
+.project-image {
+  margin-bottom: 1rem; /* spacing under images on small screens */
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  display: block;
+}
+
+/* Certifications badge cards */
+.project-card.cert-badge {
+  align-items: center;
+}
+
+/* Experience job cards */
+.job,
+.education-item {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  box-shadow: var(--box-shadow-subtle);
+}
+.job p,
+.education-item p {
+  margin-top: 0;
+  font-style: italic;
+  color: var(--color-muted-text);
+}
+.job ul,
+.education-item ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
+}
+.job ul li,
+.education-item ul li {
+  margin-bottom: 0.5rem;
+}
+.tech-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-icon-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 10px;
+  color: var(--color-muted-text);
+}
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  color: var(--color-muted-text);
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: left 0.3s ease;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .project-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .project-image {
+    margin-bottom: 0; /* remove bottom margin */
+    margin-right: 1.5rem; /* add right margin */
+    max-width: 280px;
+    flex-shrink: 0;
+  }
+  .project-info {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .project-card.cert-badge {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+/* === Navigation styles === */
+.primary-nav,
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+.links {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .primary-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem 1rem;
-  margin: 0 auto;
-  max-width: 900px;
+  background-color: var(--color-header-bg);
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
-.primary-nav a {
-  color: var(--color-text);
+.primary-nav a,
+.links a {
+  color: var(--color-primary);
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 600;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 .primary-nav a:hover,
-.primary-nav a:focus-visible {
-  background-color: var(--color-border);
-  color: var(--color-text);
+.primary-nav a:focus-visible,
+.links a:hover,
+.links a:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-header-text);
   outline: none;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px var(--color-primary);
 }
 
-/* === Section Headings === */
-section {
-  margin-bottom: 2rem;
+.links a:last-child,
+.primary-nav a:last-child {
+  margin-right: 0;
 }
 
-section h2 {
-  font-size: 1.5rem;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-}
+/* Responsive adjustment for primary nav */
 
-/* === Lists === */
-ul {
-  padding-left: 1.2rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* === Highlighted Work === */
-.project {
-  margin-bottom: 1rem;
-}
-
-.project-title {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.project a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-/* === Social Links (Footer or Section) === */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.social-links a:hover,
-.social-links a:focus-visible {
-  text-decoration: underline;
-}
-
-/* === Responsive === */
-@media (max-width: 600px) {
-  .primary-nav {
+@media (max-width: 480px) {
+  .primary-nav ul {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .social-links {
-    flex-direction: column;
-    align-items: center;
+    gap: 0.75rem;
   }
 }
