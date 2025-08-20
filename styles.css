@@ -103,6 +103,9 @@ li {
 .project-info {
   margin-bottom: 1rem;
 }
+.project-info strong {
+  font-size: 1.25rem;
+}
 .project-info strong a {
   font-size: 1.25rem;
   color: var(--color-primary);
@@ -124,11 +127,6 @@ li {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-light);
   display: block;
-}
-
-/* Certifications badge cards */
-.project-card.cert-badge {
-  align-items: center;
 }
 
 /* Experience job cards */
@@ -219,18 +217,14 @@ footer {
     align-items: center;
   }
   .project-image {
-    margin-bottom: 0; /* remove bottom margin */
-    margin-right: 1.5rem; /* add right margin */
+    margin-bottom: 0;
+    margin-right: 1.5rem;
     max-width: 280px;
     flex-shrink: 0;
   }
   .project-info {
     flex: 1;
     margin-bottom: 0;
-  }
-  .project-card.cert-badge {
-    flex-direction: column;
-    padding: 1rem;
   }
 }
 
@@ -286,4 +280,149 @@ footer {
     flex-direction: column;
     gap: 0.75rem;
   }
+}
+
+/* Add mobile-first responsive design */
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Stack links vertically on mobile */
+  .links {
+    margin-bottom: 1rem;
+  }
+  .links,
+  .primary-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .links a,
+  .primary-nav a {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    background: #fff;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* Tablet and mobile layout */
+@media (max-width: 1024px) {
+  main {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  /* Make tech icons wrap and stack better */
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .tech-icon-with-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 60px;
+  }
+
+  /* Projects grid for mobile */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  .project-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tech-icons {
+    justify-content: center;
+  }
+
+  .tech-icon-with-label {
+    min-width: 50px;
+  }
+
+  .tech-icon-with-label .label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Skip link should be accessible */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }

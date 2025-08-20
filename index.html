@@ -3,19 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tai Corraggio Portfolio</title>
+
+    <!-- SEO: title & description -->
+    <title>Tai Corraggio | Senior Full-Stack Software Engineer | Ontario</title>
+    <meta
+      name="description"
+      content="Portfolio of Tai Corraggio, Senior Full-Stack Engineer based in Ontario. Experienced in React, Rails, Django, TypeScript, and PostgreSQL."
+    />
+
+    <!-- Open Graph / Social sharing -->
+    <meta
+      property="og:title"
+      content="Tai Corraggio | Senior Full-Stack Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Tai Corraggio, Senior Full-Stack Engineer based in Ontario. Experienced in React, Rails, Django, TypeScript, and PostgreSQL."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://taicorraggio.com" />
+    <meta
+      property="og:image"
+      content="https://taicorraggio.com/images/og-image.png"
+    />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tai Corraggio | Senior Full-Stack Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Tai Corraggio, Senior Full-Stack Engineer based in Ontario. Experienced in React, Rails, Django, TypeScript, and PostgreSQL."
+    />
+    <meta
+      name="twitter:image"
+      content="https://taicorraggio.com/images/og-image.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tai Corraggio",
+        "jobTitle": "Senior Full-Stack Software Engineer",
+        "url": "https://yourportfolio.com",
+        "sameAs": [
+          "https://github.com/TaiWilkin",
+          "https://www.linkedin.com/in/tai-wilkin-corraggio-aa9772129/",
+          "https://wellfound.com/u/tai-corraggio"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cardinal",
+          "addressRegion": "Ontario",
+          "addressCountry": "Canada"
+        },
+        "description": "Senior Full-Stack Software Engineer with experience in React, Rails, Django, TypeScript, and PostgreSQL. Experienced in civic tech and enterprise applications."
+      }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <h1>Tai Corraggio</h1>
-      <p>Full-Stack Engineer • Human-Centered Technologist</p>
+      <p>Senior Full-Stack Engineer • Human-Centered Technologist</p>
       <nav class="links" aria-label="Contact and social links">
         <a href="mailto:TaiCorraggio@gmail.com" title="Email">Email </a>
         <a
@@ -34,23 +115,15 @@
         >
           LinkedIn
         </a>
-        <a
-          href="https://wellfound.com/u/tai-corraggio"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Wellfound"
-        >
-          Wellfound
-        </a>
       </nav>
       <div class="primary-nav-container">
         <nav class="primary-nav" aria-label="Main site navigation">
           <a href="#about-me">About</a>
           <a href="#skills">Skills</a>
+          <a href="#highlighted-work">Highlighted Work</a>
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#professional-development">Professional Development</a>
-          <a href="#highlighted-work">Highlighted Work</a>
         </nav>
       </div>
     </header>
@@ -63,7 +136,9 @@
           scalable software that makes a difference. I’ve worked on benefit
           applications for veterans, mapped infrastructure risk across New
           Jersey, and contributed to global civic tech platforms like Open
-          Supply Hub. I care deeply about using technology for public good.
+          Supply Hub. I care deeply about using technology for public good. I am
+          based in Cardinal, Ontario, and am authorized to work in Canada until
+          June 2026.
         </p>
       </section>
 
@@ -87,10 +162,115 @@
         </ul>
       </section>
 
+      <section id="highlighted-work">
+        <h2>Highlighted Work</h2>
+        <div class="projects">
+          <div class="project-card">
+            <img
+              src="images/va-gov.png"
+              alt="VA.gov form screenshot"
+              width="280"
+            />
+            <div class="project-info">
+              <strong
+                ><a
+                  href="https://www.va.gov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >VA.gov – Veteran Benefit Forms</a
+                ></strong
+              >
+              <p>
+                Contributed to backend Rails development and front-end React
+                features for critical federal benefit forms. Built APIs,
+                improved error monitoring, and enhanced accessibility, helping
+                thousands of veterans submit claims reliably every day.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="images/rp-magic.png"
+              alt="RP Magic project screenshot"
+              width="280"
+            />
+            <div class="project-info">
+              <strong>RP Magic – Infrastructure Risk Mapping</strong>
+              <p>
+                Led full-stack development of a greenfield
+                TypeScript/React/Django application with PostgreSQL. Built fast,
+                scalable interactive maps for New Jersey utilities, enabling
+                instant infrastructure planning. Success of the project led to a
+                follow-on contract to expand coverage to additional US states.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="images/open-supply-hub.png"
+              alt="Open Supply Hub homepage"
+              width="280"
+            />
+            <div class="project-info">
+              <strong
+                ><a
+                  href="https://opensupplyhub.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open Supply Hub – Global Civic Tech Platform</a
+                ></strong
+              >
+              <p>
+                Contributed full-stack features to a platform enhancing supply
+                chain transparency across 200+ countries and territories.
+                Improved front-end usability and maintained robust back-end data
+                pipelines, supporting organizations in tracking sustainability.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="images/stormwater-connect.png"
+              alt="Stormwater Connect UI"
+              width="280"
+            />
+            <div class="project-info">
+              <strong
+                ><a
+                  href="https://water.phila.gov/stormwater/connect/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Philadelphia Water Department – Stormwater Connect</a
+                ></strong
+              >
+              <p>
+                Led the release of a complex dual-application civic web platform
+                on AWS that had been abandoned prior to launch. Reworked code
+                and deployment pipelines to support a last-minute switch from
+                planned separate URLs to the final consolidated URLs, enabling
+                contractors and residents to manage stormwater projects and
+                credits efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="experience">
         <h2>Experience</h2>
         <div class="job">
-          <h3>Senior Software Engineer – Coforma</h3>
+          <h3>
+            Senior Software Engineer –
+            <a
+              href="https://coforma.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Coforma</a
+            >
+          </h3>
           <p><em>08/2023 – Present • Pennsylvania (Remote)</em></p>
           <ul>
             <li>
@@ -167,7 +347,15 @@
         </div>
 
         <div class="job">
-          <h3>Software Engineer III – Azavea/Element 84</h3>
+          <h3>
+            Software Engineer III –
+            <a
+              href="https://technical.ly/startups/azavea-acquired-by-element-84/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Element 84 (previously Azavea)</a
+            >
+          </h3>
           <p><em>02/2020 – 08/2023 • Pennsylvania (Remote)</em></p>
           <ul>
             <li>
@@ -250,7 +438,15 @@
         </div>
 
         <div class="job">
-          <h3>Lead Front-end Developer – Starship Health Technologies</h3>
+          <h3>
+            Lead Front-end Developer –
+            <a
+              href="https://starshiphealth.com/technologies_product.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Starship Health Technologies</a
+            >
+          </h3>
           <p><em>04/2017 – 11/2019 • Pennsylvania</em></p>
           <ul>
             <li>
@@ -390,108 +586,8 @@
           </ul>
         </div>
       </section>
-
-      <section id="highlighted-work">
-        <h2>Highlighted Work</h2>
-        <div class="projects">
-          <div class="project-card">
-            <img
-              src="images/va-gov.png"
-              alt="VA.gov form screenshot"
-              width="280"
-            />
-            <div class="project-info">
-              <strong
-                ><a
-                  href="https://www.va.gov/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >VA.gov</a
-                ></strong
-              >
-              <p>
-                Developed and maintained complex government benefit forms,
-                improving access for tens of thousands of veterans.
-              </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img
-              src="images/rp-magic.png"
-              alt="RP Magic project screenshot"
-              width="280"
-            />
-            <div class="project-info">
-              <strong
-                ><a
-                  href="https://rpmagic.amwater.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >RP Magic</a
-                ></strong
-              >
-              <p>
-                Led a greenfield TypeScript app mapping pipe failure risk across
-                New Jersey, with map load times under one second.
-              </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img
-              src="images/open-supply-hub.png"
-              alt="Open Supply Hub homepage"
-              width="280"
-            />
-            <div class="project-info">
-              <strong
-                ><a
-                  href="https://opensupplyhub.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Open Supply Hub</a
-                ></strong
-              >
-              <p>
-                Contributed to a global supply chain transparency platform,
-                enhancing traceability across over 200 countries and
-                territories.
-              </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img
-              src="images/stormwater-connect.png"
-              alt="Stormwater Connect UI"
-              width="280"
-            />
-            <div class="project-info">
-              <strong
-                ><a
-                  href="https://element84.com/software-engineering/14-years-of-helping-to-manage-stormwater-in-philadelphia/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Philadelphia Water Department</a
-                ></strong
-              >
-              <p>
-                Led technical development for Stormwater Connect, a tool for
-                stormwater credit reduction; also contributed to other tools
-                supporting public engagement for Philadelphia residents.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>&copy; 2025 Tai Corraggio</footer>
-    <script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"
-    ></script>
   </body>
 </html>
